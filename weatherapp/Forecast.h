@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Weather.h"
 @interface Forecast : NSObject
+@property (nonatomic, retain) NSMutableArray *weatherByDay;
+
+- (id)initWithDic: (NSDictionary *)myDic;
 
 @end

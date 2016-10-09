@@ -15,6 +15,10 @@
 		74A941801DA92FA4008CF0AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74A9417E1DA92FA4008CF0AF /* LaunchScreen.storyboard */; };
 		74A9418B1DA92FA4008CF0AF /* weatherappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A9418A1DA92FA4008CF0AF /* weatherappTests.m */; };
 		74A941961DA92FA4008CF0AF /* weatherappUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A941951DA92FA4008CF0AF /* weatherappUITests.m */; };
+		74A941A51DA946A3008CF0AF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A941A41DA946A3008CF0AF /* CoreLocation.framework */; };
+		74A941A81DA95A25008CF0AF /* WeatherAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A941A71DA95A25008CF0AF /* WeatherAPIManager.m */; };
+		74A941AB1DA9AD6B008CF0AF /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A941AA1DA9AD6B008CF0AF /* Weather.m */; };
+		74A941F61DA9E9F9008CF0AF /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A941F51DA9E9F9008CF0AF /* Forecast.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,13 @@
 		74A941911DA92FA4008CF0AF /* weatherappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weatherappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74A941951DA92FA4008CF0AF /* weatherappUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = weatherappUITests.m; sourceTree = "<group>"; };
 		74A941971DA92FA4008CF0AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74A941A41DA946A3008CF0AF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		74A941A61DA95A25008CF0AF /* WeatherAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherAPIManager.h; sourceTree = "<group>"; };
+		74A941A71DA95A25008CF0AF /* WeatherAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherAPIManager.m; sourceTree = "<group>"; };
+		74A941A91DA9AD6B008CF0AF /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
+		74A941AA1DA9AD6B008CF0AF /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
+		74A941F41DA9E9F9008CF0AF /* Forecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Forecast.h; sourceTree = "<group>"; };
+		74A941F51DA9E9F9008CF0AF /* Forecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Forecast.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74A941A51DA946A3008CF0AF /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +97,7 @@
 				74A941891DA92FA4008CF0AF /* weatherappTests */,
 				74A941941DA92FA4008CF0AF /* weatherappUITests */,
 				74A9416E1DA92FA4008CF0AF /* Products */,
+				74A941A31DA946A3008CF0AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +114,13 @@
 		74A9416F1DA92FA4008CF0AF /* weatherapp */ = {
 			isa = PBXGroup;
 			children = (
+				74A941F71DAA04C5008CF0AF /* Models */,
 				74A941731DA92FA4008CF0AF /* AppDelegate.h */,
 				74A941741DA92FA4008CF0AF /* AppDelegate.m */,
-				74A941761DA92FA4008CF0AF /* ViewController.h */,
+				74A941A61DA95A25008CF0AF /* WeatherAPIManager.h */,
+				74A941A71DA95A25008CF0AF /* WeatherAPIManager.m */,
 				74A941771DA92FA4008CF0AF /* ViewController.m */,
+				74A941761DA92FA4008CF0AF /* ViewController.h */,
 				74A941791DA92FA4008CF0AF /* Main.storyboard */,
 				74A9417C1DA92FA4008CF0AF /* Assets.xcassets */,
 				74A9417E1DA92FA4008CF0AF /* LaunchScreen.storyboard */,
@@ -138,6 +154,25 @@
 				74A941971DA92FA4008CF0AF /* Info.plist */,
 			);
 			path = weatherappUITests;
+			sourceTree = "<group>";
+		};
+		74A941A31DA946A3008CF0AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74A941A41DA946A3008CF0AF /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74A941F71DAA04C5008CF0AF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				74A941A91DA9AD6B008CF0AF /* Weather.h */,
+				74A941AA1DA9AD6B008CF0AF /* Weather.m */,
+				74A941F41DA9E9F9008CF0AF /* Forecast.h */,
+				74A941F51DA9E9F9008CF0AF /* Forecast.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +314,9 @@
 				74A941781DA92FA4008CF0AF /* ViewController.m in Sources */,
 				74A941751DA92FA4008CF0AF /* AppDelegate.m in Sources */,
 				74A941721DA92FA4008CF0AF /* main.m in Sources */,
+				74A941F61DA9E9F9008CF0AF /* Forecast.m in Sources */,
+				74A941A81DA95A25008CF0AF /* WeatherAPIManager.m in Sources */,
+				74A941AB1DA9AD6B008CF0AF /* Weather.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

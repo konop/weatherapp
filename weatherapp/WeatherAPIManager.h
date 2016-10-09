@@ -7,7 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+#import "Forecast.h"
+
+
+typedef void (^WeatherNetworkingSuccess)(id responseObject);
+typedef void (^WeatherNetworkingFailure)(NSError *error);
 
 @interface WeatherAPIManager : NSObject
+
++ (id)sharedManager;
+
+- (void)getWeather:(CLLocation *)searchLocation
+            success:(WeatherNetworkingSuccess)success
+            failure:(WeatherNetworkingFailure)failureRespond;
 
 @end
